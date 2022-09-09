@@ -1,0 +1,36 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Kalkulačka</h1>
+
+    <hr />
+
+    <form method="post" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label>Číslo 1</label>
+            <input asp-for="@Model.CalculatorData.Cislo1" class="form-control" />
+            <span asp-validation-for="@Model.CalculatorData.Cislo1" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Číslo 2</label>
+            <input asp-for="@Model.CalculatorData.Cislo2" class="form-control" />
+            <span asp-validation-for="@Model.CalculatorData.Cislo2" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Spočítej</button>
+        </div>
+
+    </form>
+    <hr />
+    <p>Výsledek je: @Model.CalculatorData.Vysledek</p>
+    <h5></h5>
+
+
+</div>

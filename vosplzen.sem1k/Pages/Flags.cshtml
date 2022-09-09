@@ -1,0 +1,28 @@
+﻿@page
+@model vosplzen.sem1k.Pages.FlagsModel
+@{
+}
+
+<h1>Vlajky</h1>
+<hr class="mb-2" />
+
+<div class="row">
+    <div class="col-6 text-center">
+        <form method="post">
+            <input hidden asp-for="@Model.FlagInput.NatCode" value="de" />
+            <button class="btn btn-primary" type="submit">Německo</button>
+        </form>
+    </div>
+    <div class="col-6 text-center">
+        <form method="post">
+            <input hidden asp-for="@Model.FlagInput.NatCode" value="en" />
+            <button class="btn btn-primary" type="submit">Anglie</button>
+        </form>
+    </div>
+</div>
+
+<hr />
+
+<center>
+    <img src="@Model.FlagInput.Url" width="500" />
+</center>
